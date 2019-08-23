@@ -28,8 +28,9 @@ ipcRenderer.on('config_loaded', (event, arg) => {
 	log('Config loaded.')
 	log('Logging in with token...');
 	// Call the discord login function with the token passed in config
+	console.log("Logging in with token...");
 	client.login(config['token'])
-	.catch( e =>  log(e) )
+	.catch( e =>  console.log(e) )
 })
 
 // Whenever a message is received then append the messages window with the message and its HTML
@@ -61,6 +62,7 @@ client.on('message', msg => {
 	join each of them using an invite using a POST request, which is undocumented in the API
 */
 client.on('ready', () => {
+	console.log("Logged in with token...")
 	log(`Logged in as ${client.user.tag}!`);
 	var n = client.guilds.array().length;
 	log(`Number of servers joined: ${n}`);
