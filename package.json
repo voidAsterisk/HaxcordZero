@@ -1,0 +1,8 @@
+{
+  "name": "Lurk",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
